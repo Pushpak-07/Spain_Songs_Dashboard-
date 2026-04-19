@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import os
 
 # -----------------------------
 # PAGE CONFIG
@@ -94,8 +95,13 @@ st.markdown("""
 # -----------------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv("spotify_spain_top50_cleaned.csv")
-    lifecycle = pd.read_csv("spotify_spain_lifecycle.csv")
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+    df_path = os.path.join(BASE_DIR, "spotify_spain_top50_cleaned.csv")
+    lifecycle_path = os.path.join(BASE_DIR, "spotify_spain_lifecycle.csv")
+
+    df = pd.read_csv(df_path)
+    lifecycle = pd.read_csv(lifecycle_path)
 
     df['date'] = pd.to_datetime(df['date'])
     lifecycle['entry_date'] = pd.to_datetime(lifecycle['entry_date'])
