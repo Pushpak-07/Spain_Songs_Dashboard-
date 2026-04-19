@@ -71,7 +71,7 @@ Spain_Project/
 
 ```bash
 # Clone repo
-git clone https://github.com/yourusername/spain-playlist-project.git
+git clone https://github.com/Pushpak-07/Spain_Songs_Dashboard-.git
 
 # Go to folder
 cd spain-playlist-project
