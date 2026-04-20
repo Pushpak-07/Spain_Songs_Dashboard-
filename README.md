@@ -63,7 +63,7 @@ Spain_Project/
 
 ## 🌐 Live Demo
 
-👉 *[Add your Streamlit link here]*  
+👉 (https://spain-playlist-analytics.streamlit.app/)  
 
 ---
 
